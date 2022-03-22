@@ -13,7 +13,15 @@ export class DialogComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.loadDynamicComponent();
+    // this.loadDynamicComponent();
+  }
+
+  openComponenet() {
+    this.dynamicChild.viewContainerRef.createComponent(DynamicChildComponentComponent);
+  }
+
+  closecomponenet() {
+    this.dynamicChild.viewContainerRef.clear();
   }
 
   private loadDynamicComponent() {
