@@ -31,8 +31,6 @@ export class CustomControlPageComponent implements OnInit, ControlValueAccessor 
     this.onTouch = fn;
   }
   setDisabledState(isDisabled: boolean): void {
-    console.log(isDisabled);
-    
     this.disabled = isDisabled
   }
 
@@ -42,10 +40,6 @@ export class CustomControlPageComponent implements OnInit, ControlValueAccessor 
   setValue() {
     this.onChange(this.value)
     this.onTouch()
-  }
-
-  disable() {
-    this.disabled = true;
   }
 
 }

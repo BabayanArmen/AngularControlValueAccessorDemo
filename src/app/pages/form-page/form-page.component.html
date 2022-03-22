@@ -1,14 +1,8 @@
-<p>form-page works!</p>
-
 <p>{{form.value.name}}</p>
-<p>{{form.get('name')?.touched}}</p>
-<p>{{form.get('name')?.hasError}}</p>
-
-
 
 <div [formGroup]="form">
     <app-custom-control-page formControlName="name"></app-custom-control-page>
 </div>
 
-
-<button (click)="logForm()">get form</button>
+<button (click)="disableCVA()">disable</button>
+<button (click)="enableCVA()">enable</button>

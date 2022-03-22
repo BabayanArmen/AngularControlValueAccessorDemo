@@ -13,12 +13,15 @@ export class FormPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl('John', [Validators.required])
+      name: new FormControl({value: "John", disabled: true}, [Validators.required]),
     })
   }
 
-  logForm() {
-    console.log(this.form);
+  disableCVA() {
+    this.form.get('name')?.disable()
+  }
+  enableCVA() {
+    this.form.get('name')?.enable()
   }
 
 }

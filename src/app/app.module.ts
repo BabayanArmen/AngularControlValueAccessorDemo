@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { CustomControlPageComponent } from './pages/custom-control-page/custom-control-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DynamicChildComponentComponent } from './pages/dynamic-child-component/dynamic-child-component.component';
+import {DialogModule} from "./modules/dialog/dialog.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     FormPageComponent,
-    CustomControlPageComponent
+    CustomControlPageComponent,
+    DynamicChildComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
